@@ -1,0 +1,24 @@
+appname: "Retail"
+layout: "main"
+charset: "UTF-8"
+template: Xslate
+session: YAML
+
+engines:
+  template:
+    Xslate: { path: "", type: 'text' }
+  session:
+    YAML:
+      session_dir: /home/retail/Retail/sessions
+
+db:
+  socket: 0
+  host: 'localhost'
+  port: '5432'
+  name: 'app'
+  user: 'app'
+  pass: ''
+
+secrets: '17b4578aabaa13b546853615735a9a543439655f'
+
+

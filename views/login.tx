@@ -1,0 +1,29 @@
+<link rel="stylesheet" href="/css/login.css">
+<style>
+.password {position: relative;}
+.password-control {position: absolute;top: 11px;right: 10px;display: inline-block;width: 20px;height: 20px;background: url(/img/auth/view.svg) 0 0 no-repeat;}
+.password-control.view {background: url(/img/auth/no-view.svg) 0 0 no-repeat;}
+</style>
+<body class="text-center">
+    <form class="form-signin" method="post" action="/login" style="text-align: left !important;">
+        <h1 class="h3 mb-3 font-weight-normal">
+            Требуется авторизация
+        </h1>
+        <h4 class="h3 mb-3 font-weight-normal" style="color: red; font-size: 1.2em;"><: $error :></h4>
+
+        <div style="margin: 1em 0em;">
+            <label for="inputLogin" class="sr-only">Логин</label>
+            <input autocomplete="off" style="margin-bottom: 0px; font-size: .9em;" name="login" type="text" id="inputLogin" class="form-control" placeholder="Логин" required autofocus value="<: $login :>">
+        </div>
+
+        <div style="margin: 1em 0em;" class="password">
+            <label for="inputPassword" class="sr-only">Password</label>
+            <input autocomplete="off" style="margin-bottom: 0px; font-size: .9em;" name="pass" type="password" id="inputPassword" class="form-control" placeholder="Пароль" required>
+        </div>
+
+        <div style="margin: 1em 0em;">
+            <button class="btn btn-lg btn-primary btn-block" type="submit">Войти</button>
+            <input name="redirect_url" type="hidden" value="<: $redirect_url :>">
+        </div>
+    </form>
+</body>
